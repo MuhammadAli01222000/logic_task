@@ -26,16 +26,14 @@ void main() {
   //print(task22(-5));
   //print(task23(20));
   //print(task24(1, 1, 1, -1));
-//  print(task25(2, 2, -1));
-//print(task26(11, 1, 2));
-print(task27(1,1, 1));
+  //  print(task25(2, 2, -1));
+  //print(task26(11, 1, 2));
+  //print(task27(1,1, 1));
 
-
-
-
-
-
+  print(kabisa(2000));
 }
+
+bool kabisa(int a) =>  (a % 100) != 0||((a % 400) % 4 == 0 && (a % 100 != 0)) ;
 
 int task1(int? son) {
   int $res = 0;
@@ -222,15 +220,14 @@ int task25(int a, int b, int c) {
   return 3;
 }
 
-
 int task26(int a, int b, int c) {
   if (a == 0 || b == 0 || c == 0) return 0;
-  if (a % 2 == 0 && b % 2 == 0 ) return 1;
+  if (a % 2 == 0 && b % 2 == 0) return 1;
   if (b % 2 == 0 || c % 2 == 0) return 1;
   if (a % 2 == 0 || c % 2 == 0) return 1;
 
   //
-  if (a % 2 != 0 && b % 2 != 0 ) return 2;
+  if (a % 2 != 0 && b % 2 != 0) return 2;
   if (b % 2 != 0 || c % 2 != 0) return 2;
   if (a % 2 != 0 || c % 2 != 0) return 2;
   return 3;
@@ -239,5 +236,5 @@ int task26(int a, int b, int c) {
 int task27(int a, int b, int c) {
   if (a == 0 || b == 0 || c == 0) return 0;
 
-  return (a*100)+(b*10)+c;
+  return (a * 100) + (b * 10) + c;
 }
