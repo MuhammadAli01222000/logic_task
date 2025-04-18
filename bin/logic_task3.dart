@@ -1,4 +1,5 @@
 import 'dart:io';
+
 /*
             j
    [1 ,2 ,3, 4,]
@@ -17,28 +18,33 @@ void main() {
   //  task2(n2);
   //  task3(n3);
   // task4(n4);
-//  task5(n5);
-//  task6(n6);
-//  task7(n6);
- // task8(n6);
+  //  task5(n5);
+  //  task6(n6);
+  //  task7(n6);
+  // task8(n6);
   //task9(n6);
   //task10(n6); /// boshi 0 bolib qolyapti
- // task11(n6);
+  // task11(n6);
   //task12(n6);
- // task13(n6);
- // task14(n6);
-//  task15(n6);
-//  task16(n6);
- // task18(n6);
-//  task19(n6);
-// task20(n6);/// xatosi bor
-//task21(n6);
-//task22(n6);
-//task23(n6);
-//task24(n6);/// chala
-//task29(12,50);
-//task30(2,10,3);
-task31(7,2);
+  // task13(n6);
+  // task14(n6);
+  //  task15(n6);
+  //  task16(n6);
+  // task18(n6);
+  //  task19(n6);
+  // task20(n6);/// xatosi bor
+  //task21(n6);
+  //task22(n6);
+  //task23(n6);
+  //  task25(n6);
+  // task26(n6);
+  //  task27(n6);/// chala
+  //romb(n6);
+  //romb2(n6);
+  romb3(n6);
+  //task29(12,50);
+  //task30(2,10,3);
+  //task31(7,2);
 }
 
 double task1(int n) {
@@ -123,6 +129,7 @@ void task6(int n6) {
     print("");
   }
 }
+
 void task7(int n6) {
   for (int i = 0; i <= n6; i++) {
     for (int j = 0; j <= n6; j++) {
@@ -136,12 +143,10 @@ void task7(int n6) {
   }
 }
 
-
-
 void task8(int n6) {
   for (int i = 0; i <= n6; i++) {
     for (int j = 0; j <= n6; j++) {
-      if ( j<=i) {
+      if (j <= i) {
         stdout.write("*");
       } else {
         //stdout.write(" ");
@@ -152,30 +157,27 @@ void task8(int n6) {
 }
 
 void task9(int n6) {
-  for (int i = 6; i !=0; i--) {
-    for (int j=i;j!=0;j--) {
+  for (int i = 6; i != 0; i--) {
+    for (int j = i; j != 0; j--) {
       stdout.write("*");
-
     }
     print('');
   }
 }
 
 void task10(int n6) {
-  for (int i = 1; i <=n6; i++) {
-    for (int j=i;j!=0;j--) {
-      stdout.write("${i-j}");
-
+  for (int i = 1; i <= n6; i++) {
+    for (int j = i; j != 0; j--) {
+      stdout.write("${i - j}");
     }
     print('');
   }
 }
 
 void task11(int n6) {
-  for (int i = 1; i <=n6; i++) {
-    for (int j=i;j!=0;j--) {
+  for (int i = 1; i <= n6; i++) {
+    for (int j = i; j != 0; j--) {
       stdout.write("${i}");
-
     }
     print('');
   }
@@ -194,9 +196,10 @@ void task12(int n6) {
 void task13(int n6) {
   for (int i = 0; i < n6; i++) {
     for (int j = 0; j < n6; j++) {
-      if (i == 0 ||  i == n6 - 1 || j == 0 || j == n6 - 1)
-      stdout.write('*');
-      else stdout.write(" ");
+      if (i == 0 || i == n6 - 1 || j == 0 || j == n6 - 1)
+        stdout.write('*');
+      else
+        stdout.write(" ");
     }
     print('');
   }
@@ -205,13 +208,9 @@ void task13(int n6) {
 void task14(int n6) {
   for (int i = 0; i < n6; i++) {
     for (int j = 0; j < n6; j++) {
-      if(i>j)
-        stdout.write('-');
-      if(j>i)
-       stdout.write("+");
-      if(j==i)
-        stdout.write("*");
-
+      if (i > j) stdout.write('-');
+      if (j > i) stdout.write("+");
+      if (j == i) stdout.write("*");
     }
     print('');
   }
@@ -220,19 +219,15 @@ void task14(int n6) {
 void task15(int n6) {
   for (int i = 0; i < n6; i++) {
     for (int j = 0; j < n6; j++) {
-      if(i==j||i+j==n6-1)
-        stdout.write("*");
+      if (i == j || i + j == n6 - 1) stdout.write("*");
       stdout.write(" ");
-
     }
     print('');
   }
 }
 
 void task16(int n) {
-
   for (int i = 0; i < n; i++) {
-
     for (int a = 0; a < n - i - 1; a++) {
       stdout.write(" ");
     }
@@ -242,40 +237,39 @@ void task16(int n) {
     }
 
     print("");
-
   }
 }
+
 void task18(int n6) {
   for (int i = 0; i < n6; i++) {
-
     for (int j = 0; j < n6; j++) {
-      if (j < n6- i - 1) {
+      if (j < n6 - i - 1) {
         stdout.write(" ");
       } else {
         stdout.write("* ");
       }
     }
-print('');
-  }}
+    print('');
+  }
+}
+
 /// tegma
 void task19(int n6) {
   for (int i = 0; i < n6; i++) {
     for (int j = 0; j < n6; j++) {
-     if(i==j||j>=i)
-       stdout.write("*");
-       stdout.write(" ");
-
+      if (i == j || j >= i) stdout.write("*");
+      stdout.write(" ");
     }
     print('');
   }
 }
+
 void task20(int n6) {
   for (int i = 0; i < n6; i++) {
     for (int j = 0; j < n6; j++) {
-      if(i==j||j>=i && i+j==n6-1|| i==0||j==n6-1)
+      if (i == j || j >= i && i + j == n6 - 1 || i == 0 || j == n6 - 1)
         stdout.write("*");
       stdout.write(" ");
-
     }
     print('');
   }
@@ -293,22 +287,123 @@ void task21(int n6) {
 
 void task22(int n6) {
   for (int i = 0; i < n6; i++) {
-
-    for (int j= 0; j<i; j++) {
+    for (int j = 0; j < i; j++) {
       stdout.write(" ");
     }
 
-    for (int a = 0; a <  2 * (n6 - i) - 1; a++) {
+    for (int a = 0; a < 2 * (n6 - i) - 1; a++) {
       stdout.write("*");
     }
 
- print('');
+    print('');
+  }
+}
 
-}
-}
 void task23(int n6) {
   for (int i = 0; i < n6; i++) {
+    for (int a = 0; a < n6 - i - 1; a++) {
+      stdout.write(" ");
+    }
 
+    for (int j = 0; j < 2 * i + 1; j++) {
+      if (j == 0 || j == 2 * i || i == n6 - 1) {
+        stdout.write("* ");
+      } else {
+        stdout.write(" ");
+      }
+    }
+
+    print('');
+  }
+}
+
+void task27(int n6) {
+  for (int i = 0; i <= n6; i++) {
+    for (int a = 0; a <= i; a++) {
+      stdout.write("*");
+      if (a == n6) {
+        for (int j = 6; j != 0; j--) {
+          for (int q = j; q >= 0; q--) {
+            stdout.write("*");
+          }
+
+          print('');
+        }
+        // print('');
+      }
+    }
+
+    print('');
+  }
+}
+
+void romb(int n6) {
+  int n = n6;
+  int balandlik = 1;
+
+  for (int i = 0; i < 2 * n - 1; i++) {
+    for (int j = 0; j < n - balandlik; j++) {
+      stdout.write(" ");
+    }
+
+    for (int j = 0; j < balandlik; j++) {
+      stdout.write("* ");
+    }
+
+    if (i < n - 1) {
+      balandlik++;
+    } else {
+      balandlik--;
+    }
+
+    print('');
+  }
+}
+
+void romb2(int n6) {
+  int n = n6;
+  int eni = 1;
+  for (int i = 0; i < 2 * n - 1; i++) {
+    for (int j = 0; j < n - eni; j++) {
+      stdout.write(" ");
+    }
+
+    for (int j = 0; j < 2 * eni - 1; j++) {
+      stdout.write("*");
+    }
+
+    if (i < n - 1) {
+      eni++;
+    } else {
+      eni--;
+    }
+    print('');
+  }
+}
+
+void romb3(int n6) {
+  int n = n6;
+  int eni = 1;
+  for (int i = 0; i < 2 * n - 1; i++) {
+    for (int j = 0; j < n - eni; j++) {
+      stdout.write("*");
+    }
+
+    for (int j = 0; j < 2 * eni - 1; j++) {
+      stdout.write(" ");
+    }
+
+    if (i < n - 1) {
+      eni++;
+    } else {
+      eni--;
+    }
+    print('');
+  }
+}
+
+void task25(int n6) {
+  for (int i = 0; i < n6; i++) {
     for (int a = 0; a < n6 - i - 1; a++) {
       stdout.write(" ");
     }
@@ -320,40 +415,53 @@ void task23(int n6) {
         stdout.write(" ");
       }
     }
-
     print('');
   }
 }
-void task24(int n6) {
-  int n=n6;
-  for (int i = 0; i <= n6; i++) {
-    for (int a = 0; a <=i; a++) {
-      stdout.write("*");
-if(a==n6){
-  for (int j = 6;  j!=0; j--){
-    for (int q=j; q>=0; q--){
-      stdout.write("*");
 
+void task26(int n6) {
+  for (int i = 0; i < n6; i++) {
+    for (int k = 0; k < i; k++) {
+      stdout.write(" ");
     }
 
-print('');
-  }
- // print('');
-
-}
+    for (int j = 0; j < 2 * (n6 - i) - 1; j++) {
+      if (i == 0 || j == 0 || j == 2 * (n6 - i) - 2) {
+        stdout.write("*");
+      } else {
+        stdout.write(" ");
+      }
     }
-
     print('');
   }
 }
-void task29(int n,int b) {
-  for (int i = n; i <b; i++) {
-    if(i%10==i~/10){
+
+/// tegma
+void task226(int n6) {
+  for (int i = 0; i < n6; i++) {
+    for (int a = 0; a < n6 - i - 1; a++) {
+      stdout.write(" ");
+    }
+    for (int j = 0; j < n6; j++) {
+      if (i == 0 || j == n6 - 1 || i > j) {
+        stdout.write("*");
+      } else {
+        stdout.write(" ");
+      }
+    }
+    print('');
+  }
+}
+
+void task29(int n, int b) {
+  for (int i = n; i < b; i++) {
+    if (i % 10 == i ~/ 10) {
       print(i);
-
     }
-  }}
-void task30(int a,int b, int c) {
+  }
+}
+
+void task30(int a, int b, int c) {
   int sum = 0;
   for (int i = a; i <= b; i++) {
     int res = 1;
@@ -364,13 +472,12 @@ void task30(int a,int b, int c) {
     sum += res;
   }
   print(sum);
-
-
 }
-void task31(int n,int x,) {
+
+void task31(int n, int x) {
   /// 7 , 2
   int sum = 0;
-  for (int i = 0 ; i<=n; i++) {
+  for (int i = 0; i <= n; i++) {
     int sum2 = 1;
 
     for (int j = 0; j < i; j++) {
@@ -379,8 +486,5 @@ void task31(int n,int x,) {
     sum += sum2;
   }
 
-
   print(sum);
-
-
 }
