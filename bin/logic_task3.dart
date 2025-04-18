@@ -32,7 +32,13 @@ void main() {
  // task18(n6);
 //  task19(n6);
 // task20(n6);/// xatosi bor
-task21(n6);
+//task21(n6);
+//task22(n6);
+//task23(n6);
+//task24(n6);/// chala
+//task29(12,50);
+//task30(2,10,3);
+task31(7,2);
 }
 
 double task1(int n) {
@@ -227,7 +233,7 @@ void task16(int n) {
 
   for (int i = 0; i < n; i++) {
 
-    for (int k = 0; k < n - i - 1; k++) {
+    for (int a = 0; a < n - i - 1; a++) {
       stdout.write(" ");
     }
 
@@ -283,4 +289,98 @@ void task21(int n6) {
     }
     print('');
   }
+}
+
+void task22(int n6) {
+  for (int i = 0; i < n6; i++) {
+
+    for (int j= 0; j<i; j++) {
+      stdout.write(" ");
+    }
+
+    for (int a = 0; a <  2 * (n6 - i) - 1; a++) {
+      stdout.write("*");
+    }
+
+ print('');
+
+}
+}
+void task23(int n6) {
+  for (int i = 0; i < n6; i++) {
+
+    for (int a = 0; a < n6 - i - 1; a++) {
+      stdout.write(" ");
+    }
+
+    for (int j = 0; j < 2 * i + 1; j++) {
+      if (j == 0 || j == 2 * i || i == n6 - 1) {
+        stdout.write("*");
+      } else {
+        stdout.write(" ");
+      }
+    }
+
+    print('');
+  }
+}
+void task24(int n6) {
+  int n=n6;
+  for (int i = 0; i <= n6; i++) {
+    for (int a = 0; a <=i; a++) {
+      stdout.write("*");
+if(a==n6){
+  for (int j = 6;  j!=0; j--){
+    for (int q=j; q>=0; q--){
+      stdout.write("*");
+
+    }
+
+print('');
+  }
+ // print('');
+
+}
+    }
+
+    print('');
+  }
+}
+void task29(int n,int b) {
+  for (int i = n; i <b; i++) {
+    if(i%10==i~/10){
+      print(i);
+
+    }
+  }}
+void task30(int a,int b, int c) {
+  int sum = 0;
+  for (int i = a; i <= b; i++) {
+    int res = 1;
+
+    for (int j = 0; j < c; j++) {
+      res = res * i;
+    }
+    sum += res;
+  }
+  print(sum);
+
+
+}
+void task31(int n,int x,) {
+  /// 7 , 2
+  int sum = 0;
+  for (int i = 0 ; i<=n; i++) {
+    int sum2 = 1;
+
+    for (int j = 0; j < i; j++) {
+      sum2 *= x;
+    }
+    sum += sum2;
+  }
+
+
+  print(sum);
+
+
 }
