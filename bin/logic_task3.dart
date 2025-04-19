@@ -41,7 +41,8 @@ void main() {
   //  task27(n6);/// chala
   //romb(n6);
   //romb2(n6);
-  romb3(n6);
+ // romb3(n6);
+  heart(n);
   //task29(12,50);
   //task30(2,10,3);
   //task31(7,2);
@@ -382,26 +383,77 @@ void romb2(int n6) {
 }
 
 void romb3(int n6) {
-  int n = n6;
-  int eni = 1;
-  for (int i = 0; i < 2 * n - 1; i++) {
-    for (int j = 0; j < n - eni; j++) {
+  int n = 5;
+  for (int i = 0; i < n; i++) {
+    for (int j = i; j < n; j++) {
       stdout.write("*");
     }
-
-    for (int j = 0; j < 2 * eni - 1; j++) {
+    for (int k = 1; k < i * 2 + 1; k++) {
       stdout.write(" ");
     }
-
-    if (i < n - 1) {
-      eni++;
-    } else {
-      eni--;
+    for (int j = i; j < n; j++) {
+        stdout.write("*");
     }
     print('');
   }
+
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j <= i; j++) {
+      stdout.write("*");
+    }
+    for (int k = (2 * i); k < (2 * n - 2); k++) {
+      stdout.write(" ");
+    }
+    for (int j = 0; j <= i; j++) {
+      stdout.write("*");
+    }
+
+    print('');
+
+}
+}
+void heart(int n){
+
+  for (int i = n ~/ 2; i <= n; i += 2) {
+    for (int j = 1; j < n - i; j += 2) {
+      stdout.write(" ");
+    }
+
+    for (int j = 1; j <= i; j++) {
+      stdout.write("*");
+    }
+
+    for (int j = 1; j <= n - i; j++) {
+
+      stdout.write(" ");
+    }
+
+
+    for (int j = 1; j <= i; j++) {
+
+      stdout.write("*");
+    }
+
+    stdout.write("\n");
+  }
+
+  for (int i = n; i >= 1; i--) {
+
+    for (int j = i; j < n; j++) {
+
+      stdout.write(" ");
+    }
+
+    for (int j = 1; j <= (i * 2) - 1; j++) {
+
+      stdout.write("*");
+    }
+
+    print('');
+
 }
 
+}
 void task25(int n6) {
   for (int i = 0; i < n6; i++) {
     for (int a = 0; a < n6 - i - 1; a++) {
